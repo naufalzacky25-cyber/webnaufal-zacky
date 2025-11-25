@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kharisma - Pendidikan &amp; Pengembangan</title>
+  <meta name="description" content="Landing page Kharisma — pendidikan, pelatihan, dan layanan komunitas.">
+  <meta name="author" content="Kharisma">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- empty favicon -->
+  <style>
+    /* ---------- Reset & base ---------- */
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#6ee7b7; /* mint */
+      --accent-2:#60a5fa; /* blue */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #071023 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* ---------- Header ---------- */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#04263b;box-shadow:0 6px 18px rgba(6,8,15,0.6)
+    }
+    .brand h1{font-size:18px;margin:0}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px;border-radius:8px}
+    nav a:hover{color:var(--accent)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04263b;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+
+    /* ---------- Hero ---------- */
+    .hero{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;padding:48px 0}
+    .hero-inner{background:var(--glass);border-radius:20px;padding:32px;backdrop-filter: blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;color:var(--accent);font-weight:700;margin-bottom:14px}
+    .headline{font-size:34px;line-height:1.05;margin:0 0 14px}
+    .lead{color:var(--muted);margin:0 0 22px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04263b;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:10px;color:var(--muted);text-decoration:none}
+
+    /* cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); padding:16px;border-radius:12px}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* ---------- Section ---------- */
+    section{padding:56px 0}
+    .split{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .feature-list{display:grid;gap:12px}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .feature .dot{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent), var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#04263b}
+
+    /* ---------- Footer ---------- */
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* ---------- Responsive ---------- */
+    @media (max-width:920px){
+      .split{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .headline{font-size:28px}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+      header{gap:14px}
+      .logo{width:46px;height:46px}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+    a:focus{outline:3px solid rgba(110,231,183,0.12);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">K</div>
+        <div>
+          <h1>Kharisma</h1>
+          <div class="muted" style="font-size:13px">Pendidikan · Pelatihan · Komunitas</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navigasi Utama">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#programs">Program</a>
+        <a href="#contact">Hubungi</a>
+        <a class="cta" href="#contact">Daftar</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-inner">
+          <span class="eyebrow">Selamat Datang</span>
+          <h2 class="headline">Kharisma — Memajukan kompetensi melalui pendidikan dan pelatihan yang relevan</h2>
+          <p class="lead">Kami menyediakan program pengembangan keterampilan, pelatihan vokasional, dan kegiatan komunitas untuk meningkatkan daya saing peserta di pasar kerja dan wirausaha.</p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#programs">Lihat Program</a>
+            <a class="btn-ghost" href="#about">Pelajari Lebih Lanjut</a>
+          </div>
+
+          <div class="grid" aria-hidden="false">
+            <div class="card">
+              <h3>Pelatihan Profesional</h3>
+              <p>Modul intensif untuk keterampilan teknis dan non-teknis yang langsung dapat diterapkan.</p>
+            </div>
+            <div class="card">
+              <h3>Program Sertifikasi</h3>
+              <p>Kerjasama dengan lembaga untuk sertifikat yang diakui industri.</p>
+            </div>
+            <div class="card">
+              <h3>Pengembangan UMKM</h3>
+              <p>Pendampingan pemasaran digital, manajemen keuangan, dan akses pasar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="split">
+          <div>
+            <h3>Tentang Kharisma</h3>
+            <p class="muted">Kharisma berdiri untuk memberikan kesempatan belajar yang inklusif, terjangkau, dan relevan. Fokus kami adalah mencetak tenaga kerja terampil serta mendukung pengusaha mikro dan kecil agar mampu bersaing.</p>
+
+            <div class="feature-list" style="margin-top:18px">
+              <div class="feature">
+                <div class="dot">01</div>
+                <div>
+                  <strong>Kurikum Praktis</strong>
+                  <div class="muted">Modul yang disusun berdasarkan kebutuhan industri.</div>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="dot">02</div>
+                <div>
+                  <strong>Dosen &amp; Mentor Berpengalaman</strong>
+                  <div class="muted">Pengajar dari praktisi dan akademisi.
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="dot">03</div>
+                <
